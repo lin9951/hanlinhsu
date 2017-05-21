@@ -1,0 +1,783 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-tw">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/hanlinhsu/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/hanlinhsu/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/hanlinhsu/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="DigitalOcean," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/hanlinhsu/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="DigitalOcean 是什麼呢？它是雲端主機 又稱vps好處就是可以快速建立linux環境而且cp值很高">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快速上手-DigitalOcean">
+<meta property="og:url" content="hhttps://lin9951.github.io/2017/04/09/快速上手-DigitalOcean/index.html">
+<meta property="og:site_name" content="漢霖小天地">
+<meta property="og:description" content="DigitalOcean 是什麼呢？它是雲端主機 又稱vps好處就是可以快速建立linux環境而且cp值很高">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/title.jpg">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/1.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/2.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/3.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/5.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/6.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/7.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/8.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/9.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/10.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/11.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/12.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/13.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/14.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/18.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/15.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/16.png">
+<meta property="og:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/17.png">
+<meta property="og:updated_time" content="2017-05-09T10:43:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="快速上手-DigitalOcean">
+<meta name="twitter:description" content="DigitalOcean 是什麼呢？它是雲端主機 又稱vps好處就是可以快速建立linux環境而且cp值很高">
+<meta name="twitter:image" content="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/title.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/hanlinhsu/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="hhttps://lin9951.github.io/2017/04/09/快速上手-DigitalOcean/"/>
+
+
+
+
+
+  <title>快速上手-DigitalOcean | 漢霖小天地</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/hanlinhsu/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">漢霖小天地</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">小小秘密基地</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/hanlinhsu/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/hanlinhsu/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/hanlinhsu/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="hhttps://lin9951.github.io/hanlinhsu/2017/04/09/快速上手-DigitalOcean/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hanlin HSU">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/hanlinhsu/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="漢霖小天地">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                快速上手-DigitalOcean
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-04-09T07:16:47+08:00">
+                2017-04-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/hanlinhsu/categories/learn/" itemprop="url" rel="index">
+                    <span itemprop="name">learn</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/title.jpg"></p>
+<p>DigitalOcean 是什麼呢？<br>它是雲端主機 又稱vps<br>好處就是可以快速建立linux環境<br>而且cp值很高</p>
+<hr>
+<a id="more"></a>
+<h2 id="架設DigitalOcean事前準備工具"><a href="#架設DigitalOcean事前準備工具" class="headerlink" title="架設DigitalOcean事前準備工具"></a>架設DigitalOcean事前準備工具</h2><ol>
+<li>有刷卡功能的金融卡or信用卡</li>
+<li>良好的電腦環境 </li>
+<li>愉快的心情</li>
+<li>cunpon (很重要)</li>
+</ol>
+<hr>
+<h2 id="主要概要"><a href="#主要概要" class="headerlink" title="主要概要"></a>主要概要</h2><ol>
+<li>註冊帳號</li>
+<li>生成vps</li>
+<li>產生SSH-Key</li>
+<li>連線測試</li>
+<li>後續架設</li>
+</ol>
+<hr>
+<h2 id="廢話不多說就直接進入主題吧"><a href="#廢話不多說就直接進入主題吧" class="headerlink" title="廢話不多說就直接進入主題吧"></a>廢話不多說就直接進入主題吧</h2><p>到DigitalOcean註冊帳號<br>下面有兩個連結自行點選<br>過程需要綁定信用卡，初期建造時不會收到錢，後續則看您的專案選擇方案</p>
+<blockquote>
+<ul>
+<li>免費10元美金註冊網址 ： <a href="https://m.do.co/c/88588aa67338" target="_blank" rel="external">免費10元喔～</a></li>
+<li>DigitalOcean官網：<a href="https://www.digitalocean.com/" target="_blank" rel="external">DigitalOcean</a></li>
+</ul>
+</blockquote>
+<h3 id="1-安裝VPS"><a href="#1-安裝VPS" class="headerlink" title="1.安裝VPS"></a>1.安裝VPS</h3><p>註冊完後進入DigitalOcean<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/1.png"><br>點選Create Droplet<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/2.png"><br>這裡我選ubuntu 16.04<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/3.png"><br>這裡依照個人選擇主機規格（建議先選5美元，DigitalOcean主機只能高升不能低降）<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/5.png"><br>選擇主機位置，由於屬於亞洲地區，建議選擇 Singapore<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/6.png"><br>接下來屬於本單元最大的重點 SSH-Keys 下節再回來講如何設定<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/7.png"><br>更改主機名稱<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/8.png"><br>先不要按create喔 還要設定SSH-Key</p>
+<h3 id="2-設定SSH-Key"><a href="#2-設定SSH-Key" class="headerlink" title="2.設定SSH-Key"></a>2.設定SSH-Key</h3><p>到terminal輸入<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/9.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -b 2048</div></pre></td></tr></table></figure></p>
+<p>接下來三下Enter<br>會看到這個圖案<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/10.png"><br>cd到.ssh資料夾<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/11.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat id_rsa.pub</div></pre></td></tr></table></figure></p>
+<p><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/12.png"><br>將Key複製，回貼到New SSH Key<br>輸入名稱<br>點選Add SSH KEY<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/13.png"><br>會看到你以建好SSH Key<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/14.png"><br>按下create<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/18.png"></p>
+<h3 id="3-連線測試"><a href="#3-連線測試" class="headerlink" title="3.連線測試"></a>3.連線測試</h3><p>等待vps建立<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/15.png"><br>vps建立完成 回到到terminal進行遠端連線<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/16.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -i id_rsa root@&quot;vps-ip&quot;</div></pre></td></tr></table></figure></p>
+<p>輸入yes </p>
+<p>連線成功<br><img src="/hanlinhsu/2017/04/09/快速上手-DigitalOcean/17.png"><br>接下來就可以自行進行後續Server設置</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/hanlinhsu/tags/DigitalOcean/" rel="tag"># DigitalOcean</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hanlinhsu/2017/03/08/第一次安裝hexo＋GitHubNext主题就上手-MAC篇/" rel="next" title="第一次安裝HEXO + GitHub + Next主题就上手 - MAC篇">
+                <i class="fa fa-chevron-left"></i> 第一次安裝HEXO + GitHub + Next主题就上手 - MAC篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/hanlinhsu/images/avatar.jpg"
+               alt="Hanlin HSU" />
+          <p class="site-author-name" itemprop="name">Hanlin HSU</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/hanlinhsu/archives">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">文章</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分類</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">標籤</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://example.com/" title="Title" target="_blank">Title</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#架設DigitalOcean事前準備工具"><span class="nav-number">1.</span> <span class="nav-text">架設DigitalOcean事前準備工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要概要"><span class="nav-number">2.</span> <span class="nav-text">主要概要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#廢話不多說就直接進入主題吧"><span class="nav-number">3.</span> <span class="nav-text">廢話不多說就直接進入主題吧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安裝VPS"><span class="nav-number">3.1.</span> <span class="nav-text">1.安裝VPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-設定SSH-Key"><span class="nav-number">3.2.</span> <span class="nav-text">2.設定SSH-Key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-連線測試"><span class="nav-number">3.3.</span> <span class="nav-text">3.連線測試</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hanlin HSU</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/hanlinhsu/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/hanlinhsu/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/hanlinhsu/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/hanlinhsu/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/hanlinhsu/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/hanlinhsu/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/hanlinhsu/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/hanlinhsu/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/hanlinhsu/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/hanlinhsu/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/hanlinhsu/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/hanlinhsu/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

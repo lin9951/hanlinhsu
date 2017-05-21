@@ -1,7 +1,7 @@
 ---
 title: 第一次安裝HEXO + GitHub + Next主题就上手 - MAC篇
 date: 2017-03-08 17:41:39
-tags:
+tags: Hexo
 categories: learn
 
 ---

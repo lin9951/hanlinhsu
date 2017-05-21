@@ -7,7 +7,7 @@ title: 漢霖小天地
 subtitle: 小小秘密基地
 description:
 author: Hanlin HSU
-language: zh-Hans
+language: zh-tw
 timezone:
 
 # URL
@@ -49,6 +49,9 @@ category_map:
   學習: learn
   生活日記: live
 tag_map:
+  tags: 
+    DigitalOcean
+    Hexo
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -73,5 +76,6 @@ deploy:
   type: git
   repo: https://github.com/lin9951/hanlinhsu.git
   branch: gh-pages
+
 
 avatar: /images/avatar.jpg

@@ -492,7 +492,7 @@ use_motion: true
 fancybox: true
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # three_waves
 three_waves: false
@@ -590,3 +590,11 @@ images: images
 
 # Theme version
 version: 5.1.1
+
+# title
+links_title: Links
+links:
+  MacTalk: http://macshuo.com/
+  Title: http://example.com/
+
+since: 2016
